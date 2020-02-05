@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Inverntory Turnover Demo</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">Small demo about "Inventory Turnover"</div>
+            <p>
+                In this case, <strong>Inventory Turnover</strong> is measured in days. The metric
+                shows how many days it takes to empty a warehouse.
+            </p>
+            <p>
+                First of all, we extract <strong>raw</strong> data from <strong>ERP</strong>. This
+                data represents inventory state and changes between 10/2019 and 12/2019 for small
+                part of the items. The raw data saved in format of text file with such columns:
+            </p>
+            <ul>
+                <li>Date</li>
+                <li>Nomenclature name</li>
+                <li>Nomenclature group</li>
+                <li>
+                    Quantitatively:
+                    <ul>
+                        <li>Opening balance</li>
+                        <li>Increase</li>
+                        <li>Decrease</li>
+                        <li>Closing balance</li>
+                    </ul>
+                </li>
+                <li>
+                    Summarily:
+                    <ul>
+                        <li>Opening balance</li>
+                        <li>Increase</li>
+                        <li>Decrease</li>
+                        <li>Closing balance</li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="DemoData.txt" download>Raw data file</a>
+            <p>
+                Raw data records exist at the date the changes occur. We need to expand them to
+                cover days without changes. This is required to correctly calculate the average
+                balance
+            </p>
+            <p>We will transform the data with a simple <strong>Python</strong> script</p>
+            <a href="inventory_turnover.py" download>Python script</a>
+            <a href="DemoData_expanded.txt" download>Transformed data file</a>
+            <p>
+                We load the transformed data into <strong>Power BI</strong> and create the necessary
+                measurements there. The final visualization can be viewed in
+                <strong>Power BI Desktop</strong>
+            </p>
+            <a href="DemoData.pbix" download>DemoData.pbix</a>
+            <img src="screenshot_01.jpg" alt="Overview" />
+            <p>
+                You can explore data on this chart by selecting Date, month, Group or single Item,
+                and all KPI's will updates. In this case <strong>Inventory Turnover</strong> rates
+                like:
+            </p>
+            <ul>
+                <li>0..5 days - <span class="rate_hi">High</span></li>
+                <li>5..20 days - <span class="rate_normal">Normal</span></li>
+                <li>20..50 days - <span class="rate_lo">Low</span></li>
+                <li>50.. days - <span class="rate_critical">Critical</span></li>
+            </ul>
+            <h2>Analysis</h2>
+            <p>
+                The right-side chart represents <strong>average inventory cost</strong> by groups.
+                Each group is highlighted by specific color, related to Inventory Turnover rate. So,
+                we see two big groups with "Low" preformance.
+            </p>
+            <img src="screenshot_02.jpg" alt="First group" />
+            <img src="screenshot_03.jpg" alt="First group" />
+            <p>
+                And take a look on the last month.
+            </p>
+            <img src="screenshot_04.jpg" alt="First group" />
+            <p>
+                "High" rated positions also can be interesting.
+            </p>
+            <img src="screenshot_05.jpg" alt="First group" />
+            <p>
+                Resume:
+            </p>
+            <ol>
+                <li>
+                    Such visualization let you clearly understand total value of Inventory turnover
+                    indicator, how it changes over time, and how it relates to inventory cost. Also
+                    you can easely detect groups or single items with "low" performance.
+                </li>
+                <li>
+                    In last month <strong>Inventory Turnover</strong> come back to "Normal". So, we
+                    done something right during this month.
+                </li>
+                <li>
+                    However we still have items to work with. One must understand whole context to
+                    give recomendations, but common's: lower prices, make some specific ADS.
+                </li>
+                <li>
+                    In other side we can deal with "High" positions. Rise price, combine with "Low"
+                    rated items, etc.
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>
