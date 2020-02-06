@@ -11,13 +11,13 @@
         <div class="container">
             <div class="header">Small demo about "Inventory Turnover"</div>
             <p>
-                In this case, <strong>Inventory Turnover</strong> is measured in days. The metric
-                shows how many days it takes to empty a warehouse.
+                <strong>Inventory Turnover</strong>, in this particular case is measured in days
+                showing the period of time needed to empty a warehouse.
             </p>
             <p>
                 First of all, we extract <strong>raw</strong> data from <strong>ERP</strong>. This
-                data represents inventory state and changes between 10/2019 and 12/2019 for small
-                part of the items. The raw data saved in format of text file with such columns:
+                data represents inventory state and changes between 10/2019 and 12/2019 for
+                particular items. The raw data is saved in format of text file with such columns:
             </p>
             <ul>
                 <li>Date</li>
@@ -44,9 +44,9 @@
             </ul>
             <a href="DemoData.txt" download>Raw data file</a>
             <p>
-                Raw data records exist at the date the changes occur. We need to expand them to
-                cover days without changes. This is required to correctly calculate the average
-                balance
+                Raw data records exist at the date the changes occur. In order to calculate the
+                average balance correctly it is needed to expand raw data records to cover the days
+                without changes
             </p>
             <p>We will transform the data with a simple <strong>Python</strong> script</p>
             <a href="inventory_turnover.py" download>Python script</a>
@@ -60,8 +60,8 @@
             <img src="screenshot_01.jpg" alt="Overview" />
             <p>
                 You can explore data on this chart by selecting Date, month, Group or single Item,
-                and all KPI's will updates. In this case <strong>Inventory Turnover</strong> rates
-                like:
+                and all KPI's will updates. In this case <strong>Inventory Turnover</strong> rate is
+                equal to:
             </p>
             <ul>
                 <li>0..5 days - <span class="rate_hi">High</span></li>
@@ -72,39 +72,41 @@
             <h2>Analysis</h2>
             <p>
                 The right-side chart represents <strong>average inventory cost</strong> by groups.
-                Each group is highlighted by specific color, related to Inventory Turnover rate. So,
-                we see two big groups with "Low" preformance.
+                Each group is highlighted by specific color wich relates to particular Inventory
+                Turnover rate. So, it is possible to observe two big groups with "Low" performance.
             </p>
             <img src="screenshot_02.jpg" alt="First group" />
-            <img src="screenshot_03.jpg" alt="First group" />
+            <img src="screenshot_03.jpg" alt="Second group" />
             <p>
                 And take a look on the last month.
             </p>
-            <img src="screenshot_04.jpg" alt="First group" />
+            <img src="screenshot_04.jpg" alt="Last mont" />
             <p>
                 "High" rated positions also can be interesting.
             </p>
-            <img src="screenshot_05.jpg" alt="First group" />
+            <img src="screenshot_05.jpg" alt="Hi rated" />
             <p>
                 Resume:
             </p>
             <ol>
                 <li>
                     Such visualization let you clearly understand total value of Inventory turnover
-                    indicator, how it changes over time, and how it relates to inventory cost. Also
-                    you can easely detect groups or single items with "low" performance.
+                    indicator, its changes over time and its relationship with inventory cost. Also
+                    visualization is efficient tool in detecting the groups or single items with
+                    "low" performance.
                 </li>
                 <li>
-                    In last month <strong>Inventory Turnover</strong> come back to "Normal". So, we
-                    done something right during this month.
+                    In last month Inventory Turnover stabilized due to the efficient tools which
+                    company used during that period of time
                 </li>
                 <li>
-                    However we still have items to work with. One must understand whole context to
-                    give recomendations, but common's: lower prices, make some specific ADS.
+                    However, company still have to work on with some particular items. One must
+                    understand whole context to give recommendations, but common's: lower prices,
+                    make some specific ADS.
                 </li>
                 <li>
-                    In other side we can deal with "High" positions. Rise price, combine with "Low"
-                    rated items, etc.
+                    From the other side, we can deal with "High" positions. Rise price, combine with
+                    "Low" rated items, etc.
                 </li>
             </ol>
         </div>
