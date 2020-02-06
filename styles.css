@@ -8,6 +8,7 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 40px;
 }
 
 li {
@@ -15,13 +16,13 @@ li {
 }
 
 .header {
-    height: 75px;
     background-color: #9bc1bc;
-    line-height: 75px;
     padding: 0;
     margin: 0;
     font-size: 35px;
+    line-height: 55px;
     text-align: center;
+    padding: 10px;
 }
 
 a {
